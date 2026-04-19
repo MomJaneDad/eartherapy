@@ -1,0 +1,155 @@
+/* 기본 스타일 및 반응형 설정 */
+body {
+    font-family: 'Malgun Gothic', 'Dotum', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 헤더 */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav a {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+/* 히어로 */
+.hero-index {
+    background-image: url('image_2.png');
+    /* 배경 이미지 */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.cta-button {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* 브랜드 스토리 */
+#brand-story {
+    text-align: center;
+}
+
+/* 핵심 서비스 요약 */
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.overview-item {
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* 상세 서비스 */
+.service-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.service-reverse {
+    flex-direction: row-reverse;
+}
+
+.service-content {
+    flex: 1;
+}
+
+.service-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* 연락처 */
+#info {
+    text-align: center;
+}
+
+/* 푸터 */
+footer {
+    border-top: 1px solid #eee;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+/* 모바일 반응형 스타일 */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.2em;
+    }
+
+    header .container {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    .hero-index {
+        height: auto;
+        padding: 100px 0;
+    }
+
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-section {
+        flex-direction: column-reverse;
+    }
+
+    .service-reverse {
+        flex-direction: column-reverse;
+    }
+}
