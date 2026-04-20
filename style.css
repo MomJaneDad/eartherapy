@@ -1,0 +1,155 @@
+/* 기본 스타일 및 텍스트 최적화 */
+body {
+    font-family: 'Pretendard', 'Malgun Gothic', 'Dotum', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    word-break: keep-all;
+    /* 한국어 단어 잘림 방지 */
+    background-color: #fafafa;
+    /* 아주 연한 베이지/그레이 톤으로 따뜻한 느낌 부여 */
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    /* PC에서 콘텐츠가 너무 넓게 퍼지지 않도록 제한 */
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 헤더 */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+nav a {
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #7f8c8d;
+}
+
+/* =========================================
+   상세 서비스 (PC 최적화 핵심 수정 부분) 
+========================================= */
+.service-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    /* 텍스트와 이미지 사이의 넉넉한 여백 */
+    margin-bottom: 100px;
+    /* 각 서비스 섹션 사이의 여백 */
+}
+
+.service-reverse {
+    flex-direction: row-reverse;
+}
+
+/* 텍스트 영역과 이미지 영역을 정확히 1:1 (50%) 비율로 고정 */
+.service-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.service-image {
+    flex: 1;
+    min-width: 0;
+}
+
+/* 이미지 사이즈 제한 및 고급스러운 테두리/그림자 효과 추가 */
+.service-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    /* 부드러운 그림자 */
+    display: block;
+}
+
+/* 텍스트 디자인 세부 조정 */
+h3 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1.05em;
+}
+
+ul {
+    color: #555;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    font-size: 1.05em;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* 푸터 */
+footer {
+    border-top: 1px solid #eee;
+    text-align: center;
+    font-size: 0.9em;
+    padding: 30px 0;
+    color: #888;
+    background-color: #fff;
+}
+
+/* 모바일 반응형 스타일 (화면이 작아질 때 세로로 배치) */
+@media (max-width: 768px) {
+    .service-section {
+        flex-direction: column-reverse;
+        /* 모바일에서는 이미지가 위, 텍스트가 아래로 오도록 */
+        gap: 30px;
+        margin-bottom: 80px;
+    }
+
+    .service-reverse {
+        flex-direction: column-reverse;
+    }
+
+    header .container {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 15px;
+        display: inline-block;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+}
