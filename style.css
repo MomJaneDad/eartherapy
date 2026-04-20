@@ -1,0 +1,286 @@
+/* =========================================
+   청담 이혈: 따뜻한 베이비 핑크 테마 통합 CSS
+========================================= */
+/* 기본 스타일 및 텍스트 최적화 */
+body {
+    font-family: 'Pretendard', 'Malgun Gothic', 'Dotum', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #4A3B3B;
+    /* 차가운 검은색 대신 따뜻한 딥 브라운 */
+    line-height: 1.6;
+    word-break: keep-all;
+    background-color: #FFFDFD;
+    /* 아주 연한 웜톤 배경 */
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* 헤더 */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #F4EAEA;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #D48C8C;
+    /* 우아한 핑크 포인트 */
+}
+
+nav a {
+    margin-left: 20px;
+    font-weight: 500;
+    color: #665555;
+}
+
+nav a:hover {
+    color: #D48C8C;
+}
+
+/* =========================================
+   1페이지: 홈 (index.html) 전용 스타일
+========================================= */
+/* 메인 히어로 섹션 */
+.hero-index {
+    background-image: url('image_0.png');
+    /* 이혈테라피 사진을 메인 배경으로 사용 */
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+/* 배경 이미지를 부드럽게 덮어주는 핑크빛 반투명 오버레이 */
+.hero-index::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 245, 245, 0.5);
+    /* 따뜻한 무드 연출 */
+}
+
+/* 메인 텍스트 박스 */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 50px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(212, 140, 140, 0.15);
+    /* 핑크빛 은은한 그림자 */
+}
+
+.hero-content h1 {
+    font-size: 2.2em;
+    color: #4A3B3B;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    color: #665555;
+}
+
+/* 베이비 핑크 버튼 */
+.cta-button {
+    display: inline-block;
+    background-color: #F0B4B4;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(240, 180, 180, 0.4);
+}
+
+.cta-button:hover {
+    background-color: #E29E9E;
+    transform: translateY(-2px);
+}
+
+/* 중앙 정렬 섹션 (브랜드 스토리 등) */
+#brand-story,
+#services-overview,
+#info {
+    text-align: center;
+}
+
+#brand-story p {
+    font-size: 1.1em;
+    color: #665555;
+}
+
+/* 핵심 서비스 요약 그리드 */
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.overview-item {
+    background-color: #fff;
+    border: 1px solid #F4EAEA;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.overview-item:hover {
+    transform: translateY(-5px);
+    border-color: #F0B4B4;
+    /* 마우스 올렸을 때 테두리가 핑크로 변함 */
+}
+
+.overview-item h3 {
+    color: #D48C8C;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   2페이지: 상세 서비스 (services.html) 전용 스타일
+========================================= */
+.service-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 100px;
+}
+
+.service-reverse {
+    flex-direction: row-reverse;
+}
+
+.service-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.service-image {
+    flex: 1;
+    min-width: 0;
+}
+
+.service-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(212, 140, 140, 0.15);
+    display: block;
+}
+
+h2 {
+    font-size: 2em;
+    color: #4A3B3B;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-size: 1.8em;
+    color: #D48C8C;
+    margin-bottom: 20px;
+}
+
+p,
+ul {
+    color: #665555;
+    font-size: 1.05em;
+    margin-bottom: 15px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* 푸터 */
+footer {
+    border-top: 1px solid #F4EAEA;
+    text-align: center;
+    font-size: 0.9em;
+    padding: 30px 0;
+    color: #998888;
+    background-color: #FFFDFD;
+}
+
+/* =========================================
+   모바일 반응형 최적화
+========================================= */
+@media (max-width: 768px) {
+    .hero-index {
+        height: auto;
+        padding: 100px 20px;
+    }
+
+    .hero-content {
+        padding: 30px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-section {
+        flex-direction: column-reverse;
+        gap: 30px;
+        margin-bottom: 80px;
+    }
+
+    .service-reverse {
+        flex-direction: column-reverse;
+    }
+
+    header .container {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+
+    nav {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    nav a {
+        margin: 10px 15px;
+        display: inline-block;
+    }
+}
